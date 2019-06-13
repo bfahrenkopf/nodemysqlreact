@@ -9,7 +9,7 @@ How To Use:
 * In index.js at line 10, update connection to be the correct password and database
 
 * nodemon index.js
-    -database can be seen at http://localhost:4000/import
+* database can be seen at http://localhost:4000/import
       
 * create-react-app FILENAME to create a new react-app project
 * cd FILENAME
