@@ -15,6 +15,7 @@ How To Use:
 * cd FILENAME
 * yarn start
 * use the src folder I've provided 
+* React App should be visible on http://localhost:3000/import
 
 
 
