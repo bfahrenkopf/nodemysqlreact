@@ -4,8 +4,8 @@ const mysql = require('mysql');
 
 const app = express();
 
-const SEL_ALL_PRODS_QUERY = 'SELECT * FROM import';
 
+//Connection to mysql server
 const connection = mysql.createConnection({
 	host:'localhost',
 	user: 'root',
@@ -22,6 +22,8 @@ connection.connect(err => {
 	}
 });
 
+
+const SEL_ALL_PRODS_QUERY = 'SELECT * FROM import';
 
 app.use(cors());
 
@@ -139,8 +141,6 @@ app.get('/import/update_updated/', (req,res) =>{
 	});
 });
 
-
-
 //delete entry by id number
 app.get('/import/delete/', (req,res) =>{
 	const {Id} = req.query;
@@ -154,7 +154,6 @@ app.get('/import/delete/', (req,res) =>{
 		}
 	});
 });
-
 
 //get specific entry by id number
 app.get('/import/get/:Id', (req,res) =>{
@@ -170,7 +169,8 @@ app.get('/import/get/:Id', (req,res) =>{
 	});
 });
 
-const port = process.env.PORT || 4000;
+
+var port = process.env.port || 4000;
 app.listen(port, () => {
 	console.log(`Listening on port ${port}`)
 });
